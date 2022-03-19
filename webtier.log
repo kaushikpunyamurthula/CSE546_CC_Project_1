@@ -1,7 +1,0 @@
-2022-03-12 23:30:04,180 INFO MainThread botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
-2022-03-12 23:30:04,268 INFO MainThread werkzeug  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2022-03-12 23:30:39,530 INFO Thread-1 werkzeug 127.0.0.1 - - [12/Mar/2022 23:30:39] "[33mPOST /face_recognition/upload HTTP/1.1[0m" 404 -
-2022-03-12 23:30:41,591 INFO Thread-2 werkzeug 127.0.0.1 - - [12/Mar/2022 23:30:41] "[33mPOST /face_recognition/upload HTTP/1.1[0m" 404 -
-2022-03-12 23:30:43,650 INFO Thread-3 werkzeug 127.0.0.1 - - [12/Mar/2022 23:30:43] "[33mPOST /face_recognition/upload HTTP/1.1[0m" 404 -
-2022-03-12 23:31:02,512 INFO Thread-4 werkzeug 127.0.0.1 - - [12/Mar/2022 23:31:02] "GET /face_recognition HTTP/1.1" 200 -
-2022-03-12 23:31:02,770 INFO Thread-5 werkzeug 127.0.0.1 - - [12/Mar/2022 23:31:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
