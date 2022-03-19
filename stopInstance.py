@@ -58,6 +58,5 @@ if __name__ == "__main__":
     queue_length = getQueueLength(inputQueueUrl)
     if len(result) <= 1 and queue_length == 0:
         logging.info("Second poll check has no running image classifier... stopping instance. See you later!")
-
-        #output = subprocess.check_output(["sudo", "shutdown", "-P", "now"])
-        #logging.info(output)
+        output = subprocess.check_output(["sudo", "shutdown", "-P", "now"])
+        logging.info(output)
