@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            * {box-sizing: border-box;}
+
+            .form-inline {  
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+            }
+
+            .form-inline label {
+                margin: 5px 10px 5px 0;
+            }
+
+            .form-inline input {
+                vertical-align: middle;
+                margin: 5px 10px 5px 0;
+                padding: 10px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+            }
+
+            .form-inline button {
+                padding: 10px 20px;
+                background-color: dodgerblue;
+                border: 1px solid #ddd;
+                color: white;
+                cursor: pointer;
+            }
+
+            .form-inline button:hover {
+                background-color: royalblue;
+            }
+
+            @media (max-width: 800px) {
+                .form-inline input {
+                    margin: 10px 0;
+                }
+                
+                .form-inline {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Image Upload</h2>
+
+        <form class="form-inline" method="POST" enctype="multipart/form-data">
+            <input type="file" name="myFile" multiple>
+            <input type="submit" value="Upload" formaction="/face_recognition/upload">
+            <input type="submit"  value="Result" formaction="/face_recognition/results">
+        </form>
+
+        {% if filename %}
+            <div>
+                <p class="text-center">
+                    {{filename}} images uploaded successfully
+                </p>
+            </div>
+        {% endif %}
+
+        {% if message %}
+        <div>
+            <p class="text-center">
+                {{message}} 
+            </p>
+        </div>
+        {% endif %}
+
+        {% if results %}
+            {%for i in results%} 
+                <div>
+                    <p class="text-center">
+                        {{i}}
+                    </p>
+                </div>
+            {%endfor%}  
+        {% endif %}
+
+    </body>
+</html>
